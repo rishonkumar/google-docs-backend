@@ -1,4 +1,4 @@
-import { BelongsTo, BelongsToMany, Column, DataType, HasMany, Model, Scopes, Table } from "sequelize-typescript";
+import { BelongsToMany, Column, DataType, HasMany, Model, Scopes, Table } from "sequelize-typescript";
 import { RefreshToken } from "./refresh-token.model";
 import { Role } from "./role.model";
 import { UserRole } from "./user-role.model";
