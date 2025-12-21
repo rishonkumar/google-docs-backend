@@ -1,50 +1,53 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "compilerOptions": {
-    /* =========================
+   "$schema": "https://json.schemastore.org/tsconfig",
+   "compilerOptions": {
+      /* =========================
        Runtime / Module system
        ========================= */
-    "target": "ES2020",
-    "module": "commonjs",
-    "moduleResolution": "node",
-
-    /* =========================
+      "target": "ES2020",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      /* =========================
        Interop (IMPORTANT)
        ========================= */
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-
-    /* =========================
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      /* =========================
        Project structure
        ========================= */
-    "rootDir": "./src",
-    "outDir": "./dist",
-
-    /* =========================
+      "rootDir": "./src",
+      "outDir": "./dist",
+      /* =========================
        Type checking
        ========================= */
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    /* =========================
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noUncheckedIndexedAccess": true,
+      "exactOptionalPropertyTypes": true,
+      /* =========================
        Output & debugging
        ========================= */
-    "sourceMap": true,
-    "declaration": false,
-    "declarationMap": false,
-
-    /* =========================
+      "sourceMap": true,
+      "declaration": false,
+      "declarationMap": false,
+      /* =========================
        Node environment
        ========================= */
-    "types": ["node"],
-
-    /* =========================
+      "types": [
+         "node"
+      ],
+      /* =========================
        Safety / build behavior
        ========================= */
-    "skipLibCheck": true
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+      "skipLibCheck": true
+   },
+   "include": [
+      "src/**/*.ts"
+   ],
+   "exclude": [
+      "node_modules",
+      "dist"
+   ],
+   "experimentalDecorators": true,
+   "emitDecoratorMetadata": true
 }
