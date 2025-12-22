@@ -39,7 +39,9 @@
       /* =========================
        Safety / build behavior
        ========================= */
-      "skipLibCheck": true
+      "skipLibCheck": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true
    },
    "include": [
       "src/**/*.ts"
@@ -47,7 +49,5 @@
    "exclude": [
       "node_modules",
       "dist"
-   ],
-   "experimentalDecorators": true,
-   "emitDecoratorMetadata": true
+   ]
 }
