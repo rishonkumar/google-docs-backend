@@ -2,20 +2,21 @@ import { BelongsTo, Column, DataType, Default, DefaultScope, ForeignKey, HasMany
 import { User } from "./user.model"
 import { DocumentUser } from "./document-user.model";
 
+
+@DefaultScope(() => ({
+    include: [{
+        model: DocumentUser,
+        include: [
+            {
+                model: User,
+                attributes: ["email"]
+            }
+        ]
+    }]
+}))
+
 @Table({ tableName: "document", underscored: true })
 class Document extends Model {
-
-    @DefaultScope(() => ({
-        include: [{
-            model: DocumentUser,
-            include: [
-                {
-                    model: User,
-                    attributes: ["email"]
-                }
-            ]
-        }]
-    }))
 
     @Column(DataType.STRING)
     title!: string;
