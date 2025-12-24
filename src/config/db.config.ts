@@ -3,7 +3,7 @@ import env from "./env.config";
 
 const sequelize =
     env.NODE_ENV === "test" || env.NODE_ENV === "development"
-        ? new Sequelize("gd", "postgres", "Agririze@6362", {
+        ? new Sequelize("gd", "rishonkumar", "rishon2000", {
             host: "localhost",
             dialect: "postgres",
             logging: false,
