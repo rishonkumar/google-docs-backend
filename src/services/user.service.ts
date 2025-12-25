@@ -66,6 +66,13 @@ class UserService {
         }
     }
 
+    public getIsTokenActive = async (token: string): Promise<boolean> => {
+
+        const refreshToken = await RefreshToken.findOne({ where: { token } })
+
+        return refreshToken != null
+    }
+
 }
 
 const userService = new UserService()
