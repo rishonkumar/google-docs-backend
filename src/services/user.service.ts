@@ -32,7 +32,7 @@ class UserService {
     public getRequestUser = async (user: User | RequestUser): Promise<RequestUser> => {
 
         if (user instanceof User) {
-            const userWithRole = await User.scope("withRole").findByPk(user.id)
+            const userWithRole = await User.scope("withRoles").findByPk(user.id)
             const role = userWithRole?.userRole.map((userRole) => userRole.role.name)
 
             return {
