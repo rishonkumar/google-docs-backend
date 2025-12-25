@@ -65,6 +65,18 @@ class AuthController {
             }
         )
     })
+
+    public logout = catchAsync(async (req: Request, res: Response) => {
+
+        if (!req.user) {
+            return res.status(401).json({ errors: userNotFound })
+        }
+
+        const userId = parseInt(req.user.id)
+        await userService.logoutUser(userId)
+
+        return res.status(200).json({ message: "Logout successful" })
+    })
 }
 
 const authController = new AuthController()

@@ -41,7 +41,11 @@
        ========================= */
       "skipLibCheck": true,
       "experimentalDecorators": true,
-      "emitDecoratorMetadata": true
+      "emitDecoratorMetadata": true,
+      "typeRoots": [
+         "src/types/interface",
+         "node_modules/@types"
+      ]
    },
    "include": [
       "src/**/*.ts"
